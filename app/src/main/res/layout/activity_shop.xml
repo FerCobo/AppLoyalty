@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopActivity"
+    android:background="@drawable/background_gradient">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/action_bar_toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:stretchColumns="2"
+                tools:context=".ShopActivity">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_column="1"
+                        android:background="@color/c1"
+                        android:gravity="center"
+                        android:text="Producto"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck" />
+                    <TextView
+                        android:layout_width="124dp"
+                        android:layout_height="35dp"
+                        android:layout_column="2"
+                        android:background="@color/c2"
+                        android:gravity="center"
+                        android:text="Características"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck" />
+                </TableRow>
+
+                <TableRow>
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+                    <TextView
+                        android:id="@+id/feature1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:textColor="@color/black"
+                        android:paddingStart="5dp"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow>
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+                    <TextView
+                        android:id="@+id/feature2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:textColor="@color/black"
+                        android:paddingStart="5dp"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow>
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+                    <TextView
+                        android:id="@+id/feature3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:textColor="@color/black"
+                        android:paddingStart="5dp"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow>
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+                    <TextView
+                        android:id="@+id/feature4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:textColor="@color/black"
+                        android:paddingStart="5dp"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow>
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+                    <TextView
+                        android:id="@+id/feature5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:textColor="@color/black"
+                        android:paddingStart="5dp"
+                        android:textSize="14sp" />
+                </TableRow>
+            </TableLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/advert"
+        android:layout_width="50mm"
+        android:layout_height="12mm"
+        android:layout_marginVertical="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <ImageView
+        android:id="@+id/advert2"
+        android:layout_width="50mm"
+        android:layout_height="12mm"
+        android:layout_marginVertical="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <ImageView
+        android:id="@+id/advert3"
+        android:layout_width="50mm"
+        android:layout_height="12mm"
+        android:layout_marginVertical="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <ImageView
+        android:id="@+id/advert4"
+        android:layout_width="50mm"
+        android:layout_height="12mm"
+        android:layout_marginVertical="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

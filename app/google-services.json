@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "947751690050",
+    "project_id": "deportesdalda-91cbb",
+    "storage_bucket": "deportesdalda-91cbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947751690050:android:6e62e27d1fece0c29fb2db",
+        "android_client_info": {
+          "package_name": "com.example.deportesdalda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947751690050-nvcn0qsf5pos85i9e7tfunmmufj08dne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB12igtWssrV6KDLt5v0q91EJ2YglD5QiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947751690050-nvcn0qsf5pos85i9e7tfunmmufj08dne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

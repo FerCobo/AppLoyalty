@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DeportesDalda</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_term">Términos y condiciones</string>
+    <string name="body_term">Sus datos serán incorporados en el sistema de tratamiento de CENTRAL DE DEPORTES DALDA, S.L y, siempre y cuando se cumplan los requisitos exigidos por la normativa, usted podrá ejercer sus derechos de acceso, rectificación, limitación de tratamiento, supresión, portabilidad y oposición/revocación, en los términos que establece la normativa vigente en materia de protección de datos, dirigiendo su petición a la dirección postal Avenida de Madrid  N.º 171  CP: 50017  ZARAGOZA o bien a través de correo electrónico info@thesnakerone.com.</string>
+    <string-array name="cabecera_tabla">
+        <item>ID</item>
+        <item>Nombre</item>
+        <item>Apellidos</item>
+        <item>Email</item>
+        <item>Puntos</item>
+    </string-array>
+</resources>

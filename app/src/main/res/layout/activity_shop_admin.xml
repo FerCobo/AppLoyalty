@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopAdminActivity"
+    android:background="@drawable/background_gradient">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/action_bar_toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text='Introduce la posición del producto (ID, valores posibles del 1 al 10), el nombre, la descripción (no más de 150 caracteres) y el precio. Selecciona la imagen y pulsa "Subir producto".'
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/marco2"
+                android:layout_width="32mm"
+                android:layout_height="32mm"
+                android:layout_marginVertical="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="195dp"
+                android:background="@drawable/borde_imagen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInfo" />
+
+            <Button
+                android:id="@+id/selectImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/button_rounded"
+                android:text="Seleccionar imagen"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/marco2"
+                tools:ignore="OnClick" />
+
+            <Button
+                android:id="@+id/uploadProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/button_rounded"
+                android:text="Subir Producto"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectImage"
+                tools:ignore="OnClick" />
+
+            <ImageView
+                android:id="@+id/firebaseImage"
+                android:layout_width="30mm"
+                android:layout_height="30mm"
+                android:layout_marginVertical="32dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="200dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInfo" />
+
+            <EditText
+                android:id="@+id/idTxt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/borde_texto"
+                android:ems="10"
+                android:hint="ID"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#808080"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInfo"
+                tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/nameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/borde_texto"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#808080"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idTxt"
+                tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/descriptionTxt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/borde_texto"
+                android:ems="10"
+                android:hint="Descripción"
+                android:inputType="textPersonName"
+                android:maxLength="150"
+                android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#808080"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTxt"
+                tools:ignore="RtlSymmetry,TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+
+            <EditText
+                android:id="@+id/priceTxt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/borde_texto"
+                android:digits="1234567890,"
+                android:ems="10"
+                android:hint="Precio"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#808080"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTxt"
+                tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="5dp"
+                android:stretchColumns="2"
+                app:layout_constraintTop_toBottomOf="@+id/uploadProduct"
+                tools:context=".ShopAdminActivity">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_column="1"
+                        android:background="@color/c1"
+                        android:gravity="center"
+                        android:text="Producto"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck" />
+
+                    <TextView
+                        android:layout_width="124dp"
+                        android:layout_height="35dp"
+                        android:layout_column="2"
+                        android:background="@color/c2"
+                        android:gravity="center"
+                        android:text="Características"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:id="@+id/feature1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:id="@+id/feature2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:id="@+id/feature3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:id="@+id/feature4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:id="@+id/feature5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+            </TableLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

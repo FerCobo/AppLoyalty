@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/nav_back"
+        android:icon="@drawable/ic_back"
+        android:title="Volver"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/nav_qr"
+        android:icon="@drawable/ic_qr"
+        android:title="Escanear"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/nav_edit"
+        android:icon="@drawable/ic_edit"
+        android:title="Editar"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/nav_list"
+        android:icon="@drawable/ic_list"
+        android:title="Listado de clientes"
+        app:showAsAction=""/>
+
+    <item android:id="@+id/nav_advert"
+        android:icon="@drawable/ic_advert"
+        android:title="Añadir anuncio"
+        app:showAsAction=""/>
+
+    <item android:id="@+id/nav_shop"
+        android:icon="@drawable/ic_shop"
+        android:title="Productos"
+        app:showAsAction=""/>
+
+    <item android:id="@+id/nav_reservation"
+        android:icon="@drawable/ic_reservation"
+        android:title="Reservas"
+        app:showAsAction=""/>
+
+</menu>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity"
+    android:background="@drawable/background_gradient">
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text='El sistema de puntos funciona de la siguiente manera: \n - Cada € que se gaste en el establecimiento es un punto acumulado.\n - Cada 10 puntos el cliente tendrá un € de descuento.\n\n*No es acumulabre con otras promociones o rebajas. "Deportes Dalda" se reserva el derecho de anular o modificar este sistema de puntos.'
+        android:textAlignment="inherit"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/action_bar_toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReservationActivity"
+    android:background="@drawable/background_gradient">
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/button_rounded"
+        android:onClick="delete"
+        android:text="Eliminar"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTxt"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_rounded"
+        android:onClick="add"
+        android:text="Añadir"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTxt"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/action_bar_toolbar" />
+
+    <EditText
+        android:id="@+id/nameTxt"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="270dp"
+        android:background="@drawable/borde_texto"
+        android:hint="Nombre"
+        android:paddingStart="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#808080"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/phoneTxt"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/borde_texto"
+        android:hint="Teléfono"
+        android:paddingStart="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#808080"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/dateTxt"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/borde_texto"
+        android:hint="Fecha"
+        android:paddingStart="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#808080"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/addButton"
+        tools:ignore="MissingConstraints">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:stretchColumns="4"
+                tools:context=".ListUsersActivity">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_column="1"
+                        android:background="@color/c1"
+                        android:gravity="center"
+                        android:text="Nombre"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck" />
+
+                    <TextView
+                        android:layout_width="124dp"
+                        android:layout_height="35dp"
+                        android:layout_column="2"
+                        android:background="@color/c2"
+                        android:gravity="center"
+                        android:text="Teléfono"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck" />
+
+                    <TextView
+                        android:layout_width="124dp"
+                        android:layout_height="35dp"
+                        android:layout_column="3"
+                        android:background="@color/c3"
+                        android:gravity="center"
+                        android:text="Fecha"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:paddingStart="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txtPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:paddingStart="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:paddingStart="10dp"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
